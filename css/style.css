@@ -1,0 +1,188 @@
+h1,
+h2{
+    color: #333;
+}
+
+/* Navbar */
+.navbar-brand {
+    position: relative;
+}
+
+#logo {
+    width: 50px;
+}
+
+#travelmatehelp-title {
+    color: #fff;
+    position: absolute;
+    bottom: -2px;
+    font-size: 23px;
+    left: 55px;
+    font-weight: bold;
+}
+
+#main-navbar{
+    background-color: green;
+}
+
+#search-form{
+    margin: 0 auto;
+    background-color:#fff;
+    border-radius: 5px;
+    width: 50%;
+    margin-left:180px;
+}
+
+#search-form .form-control{
+    border: none;
+    width: 90%;
+    box-shadow: none;
+}
+
+#navbar {
+    min-width: 30%;
+}
+
+.navbar-nav{
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: #fff;
+    transition: .5s;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: #777
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.msg-container{
+    background-color: green;
+    padding: 15px;
+}
+
+.msg {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border:solid 1px #fff;
+    text-align: center;
+}
+
+.msg.error{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #F5C2C7;
+}
+
+.msg.sucess {
+    color: #0F5132;
+    background-color: #d1e7dd;
+    border-color: #BADBCC;
+}
+
+/* Home */
+
+#main-container{
+    background-color:#fff;
+    color: #fff;
+    min-height: 65vh;
+    padding: 40px;
+}
+
+/* Login / Register */
+#auth-row {
+    justify-content: space-evenly;
+  }
+  
+  #login-container h2,
+  #register-container h2 {
+    text-align: center;
+    border-bottom: 2px solid #ff8086;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  #login-container form,
+  #register-container form {
+    max-width: 400px;
+    margin: 30px auto;
+  }
+  
+  .card-btn {
+    color: #cccccc;
+    background-color: #ff8086; 
+    border: 2px solid #ff8086;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .card-btn:hover {
+    background-color: #cc6666; 
+    color: #cccccc; 
+    border-color: #cc6666; 
+  }
+  
+  
+
+/* Footer */
+
+#footer{
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#social-container ul,
+#footer-links-container ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#social-container li ,
+#footer-links-container li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#social-container li ,
+#footer-links-container li {
+    display: inline-block;
+    margin: 0,20px;
+}
+
+#social-container li{
+    height: 40px;
+    width: 40px;
+    border-radius:100%;
+    transition: .5s;
+    line-height: 3;
+}
+
+#social-container li:houver{
+    background-color: #333;
+     
+}
+
+#social-container a,
+#footer-links-container a {
+    color: #fff;
+    transition: .5s;
+}
+
+#social-container li i{
+    font-size: 25px;
+}
+
+#footer-links-container{
+    margin: 30px 0;
+}
