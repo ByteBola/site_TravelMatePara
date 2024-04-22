@@ -8,7 +8,7 @@ create table users(
     password VARCHAR(200),
     image VARCHAR(200),
     token VARCHAR(200),
-    ALTER TABLE users ADD COLUMN bio TEXT
+    bio TEXT
 );
 
 create table complaint(

@@ -97,8 +97,8 @@ class UserDao implements UserDAOinterface
     public function findById($id)
     {
     }
-    public function findByToken($token)
-    {
+    public function findByToken($token){
+        
     }
     public function destroyToken()
     {
