@@ -1,19 +1,21 @@
 <?php
 
-  require_once("models/User.php");
+require_once("models/User.php");
 
-  class UserDao implements UserDAOinterface{
+class UserDao implements UserDAOinterface
+{
 
     private $conn;
     private $url;
 
-    public function __construct(PDO $conn,$url){
+    public function __construct(PDO $conn, $url)
+    {
         $this->conn = $conn;
         $this->url = $url;
-
     }
 
-    public function buildUser($data){
+    public function buildUser($data)
+    {
         $user = new User();
 
         $user->id = $data['id'];
@@ -26,37 +28,55 @@
         $user->token = $data['token'];
 
         return $user;
-
     }
-    public function create(User $user, $authUser = false){
-
+    public function create(User $user, $authUser = false)
+    {
     }
-    public function update(User $user, $redirect = true){
-
+    public function update(User $user, $redirect = true)
+    {
     }
-    public function verifyToken($protected = false){
-
+    public function verifyToken($protected = false)
+    {
     }
-    public function setTokenToSession($token, $redirect = true){
-
+    public function setTokenToSession($token, $redirect = true)
+    {
     }
-    public function authenticateUser($email, $password){
-
+    public function authenticateUser($email, $password)
+    {
     }
-    public function findByEmail($email){
+    public function findByEmail($email)
+    {
+        if ($email != "") {
 
+            $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = :email");
+
+            $stmt->bindParam(":email", $email);
+
+            $stmt->execute();
+
+            if ($stmt->rowCount() > 0) {
+
+                $data = $stmt->fetch();
+                $user = $this->buildUser($data);
+
+                return $user;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
-    public function findById($id){
-
+    public function findById($id)
+    {
     }
-    public function findByToken($token){
-
+    public function findByToken($token)
+    {
     }
-    public function destroyToken(){
-
+    public function destroyToken()
+    {
     }
-    public function changePassword(User $user){
-
+    public function changePassword(User $user)
+    {
     }
-
-  }
+}
