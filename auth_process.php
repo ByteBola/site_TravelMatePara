@@ -45,7 +45,7 @@ if ($type === "register") {
 
             }else{
                 // Enviar uma msg de erro , usuário já existe 
-                $message->setMessage("Usuário já cadastrado , tente outro email","erro", "back");
+                $message->setMessage("Usuário já cadastrado , tente outro email","error", "back");
             }
         } else {
             // Enviar uma mensagem de erro , de dados faltantes
