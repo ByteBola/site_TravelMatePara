@@ -14,7 +14,7 @@
     </div>
     <div id="footer-links-container">
         <ul>
-            <li><a href="#">Adicionar Campanha</a></li>
+            <li><a href="#">Adicionar denúncia</a></li>
             <li><a href="#">Adicionar críticar</a></li>
             <li><a href="#">Entrar / Registrar</a></li>
         </ul>

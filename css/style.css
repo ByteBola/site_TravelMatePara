@@ -3,6 +3,10 @@ h2{
     color: #333;
 }
 
+label{
+    color: #333;
+}
+
 /* Navbar */
 .navbar-brand {
     position: relative;
@@ -90,7 +94,7 @@ h2{
 
 #main-container{
     background-color:#fff;
-    color: #fff;
+    color: #ff8086;
     min-height: 65vh;
     padding: 40px;
 }
@@ -128,9 +132,7 @@ h2{
     background-color: #cc6666; 
     color: #cccccc; 
     border-color: #cc6666; 
-  }
-  
-  
+  }  
 
 /* Footer */
 

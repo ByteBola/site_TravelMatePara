@@ -7,7 +7,8 @@ create table users(
     email VARCHAR(100),
     password VARCHAR(200),
     image VARCHAR(200),
-    token VARCHAR(200)
+    token VARCHAR(200),
+    ALTER TABLE users ADD COLUMN bio TEXT
 );
 
 create table complaint(
