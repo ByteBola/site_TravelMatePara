@@ -32,7 +32,7 @@ $userData = $userDao->verifyToken(false);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- CSS do projeto -->
     <link rel="stylesheet" href="<?= $BASE_URL ?>css/style.css">
-    <script src="<?= $BASE_URL ?> js/script.js"></script>
+    <script src="<?= $BASE_URL ?>/js/script.js"></script>
 </head>
 
 <body>
@@ -53,6 +53,11 @@ $userData = $userDao->verifyToken(false);
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
+                            <i class="fas fa-cloud"></i> Previsão do tempo
+                        </a>
+                    </li>
                     <?php if ($userData) : ?>
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>newreport.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a>
@@ -75,6 +80,7 @@ $userData = $userDao->verifyToken(false);
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
                         </li>
+
                     <?php endif; ?>
                 </ul>
             </div>
