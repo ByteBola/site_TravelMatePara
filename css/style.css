@@ -167,9 +167,9 @@ label{
 }
 
 .edit-profile-page .card-btn,
-#add-movie-container .card-btn,
+#add-report-container .card-btn,
 #review-form .card-btn,
-#edit-movie-form .card-btn {
+#edit-r-form .card-btn {
   width: auto;
 }
 

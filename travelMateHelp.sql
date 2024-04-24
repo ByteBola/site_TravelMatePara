@@ -17,7 +17,7 @@ create table reports(
     description TEXT,
     image VARCHAR(200),
     --  link do google maps
-    location VARCHAR(150),
+    trailer VARCHAR(150),
     category VARCHAR(50),
     length VARCHAR(50),
     users_id INT(11) UNSIGNED,

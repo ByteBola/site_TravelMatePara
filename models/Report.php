@@ -22,7 +22,7 @@
     public function buildReport($data);
     public function findAll();
     public function getLatestReport();
-    public function getMoviesByReport($category);
+    public function getReportsByCategory($category);
     public function getReportByUserId($id);
     public function findById($id);
     public function findByTitle($title);
