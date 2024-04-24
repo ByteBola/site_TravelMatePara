@@ -4,7 +4,7 @@ h2{
 }
 
 label{
-    color: #ff8086;
+    color: #ff9933;
 }
 
 /* Navbar */
@@ -26,7 +26,7 @@ label{
 }
 
 #main-navbar{
-    background-color: green;
+    background-color: #3385ff;
 }
 
 #search-form{
@@ -66,7 +66,7 @@ label{
 }
 
 .msg-container{
-    background-color: green;
+    background-color: #3385ff;
     padding: 15px;
 }
 
@@ -84,7 +84,7 @@ label{
     border-color: #F5C2C7;
 }
 
-.msg.sucess {
+.msg.success {
     color: #0F5132;
     background-color: #d1e7dd;
     border-color: #BADBCC;
@@ -120,24 +120,25 @@ label{
   }
   
   .card-btn {
-    color: #cccccc;
-    background-color: #ff8086; 
-    border: 2px solid #ff8086;
+    color: #ffffff; /* Branco para o texto */
+    background-color: #ff9933; /* Laranja vibrante */
+    border: 2px solid #ff9933; /* Bordas no mesmo tom de laranja */
     width: 100%;
     text-align: center;
     padding: 10px;
   }
   
   .card-btn:hover {
-    background-color: #cc6666; 
-    color: #cccccc; 
-    border-color: #cc6666; 
-  }  
+    background-color: #cc7a29; /* Laranja mais escuro para o efeito hover */
+    color: #ffffff; /* Mantém o texto branco */
+    border-color: #cc7a29; /* Bordas no mesmo tom do fundo no hover */
+  }
+  
 
 /* Footer */
 
 #footer{
-    background-color: green;
+    background-color: #3385ff;
     color: #fff;
     text-align: center;
     margin: 0;

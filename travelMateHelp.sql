@@ -11,7 +11,7 @@ create table users(
     bio TEXT
 );
 
-create table complaint(
+create table reports(
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100),
     description TEXT,
