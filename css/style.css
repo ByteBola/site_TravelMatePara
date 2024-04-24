@@ -74,22 +74,21 @@ label{
     width: 60%;
     margin: 0 auto;
     padding: 10px;
-    border:solid 1px #fff;
+    border: solid 1px #000;
     text-align: center;
-}
-
-.msg.error{
+  }
+  
+  .msg.error {
     color: #842029;
-    background-color: #f8d7da;
+    background-color: #F8D7DA;
     border-color: #F5C2C7;
-}
-
-.msg.success {
+  }
+  
+  .msg.success {
     color: #0F5132;
-    background-color: #d1e7dd;
+    background-color: #D1E7DD;
     border-color: #BADBCC;
-}
-
+  }
 /* Home */
 
 #main-container{

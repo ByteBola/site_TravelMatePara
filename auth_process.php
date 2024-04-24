@@ -76,7 +76,7 @@
     // Tenta autenticar usuário
     if($userDao->authenticateUser($email, $password)) {
 
-      $message->setMessage("Seja bem-vindo!", "sucess", "editprofile.php");
+      $message->setMessage("Seja bem-vindo!", "success", "editprofile.php");
 
     // Redireciona o usuário, caso não conseguir autenticar
     } else {
