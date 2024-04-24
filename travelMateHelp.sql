@@ -30,7 +30,7 @@ create table reviews(
     rating INT,
     reviews TEXT,
     users_id INT(11) UNSIGNED,
-    complaint_id INT(11) UNSIGNED,
+    reports_id INT(11) UNSIGNED,
     FOREIGN KEY(users_id) REFERENCES users(id),
-    FOREIGN KEY(complaint_id) REFERENCES complaint(id)
+    FOREIGN KEY(reports_id) REFERENCES reports(id)
 );

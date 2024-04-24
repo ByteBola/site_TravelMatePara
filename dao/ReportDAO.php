@@ -3,19 +3,22 @@
 require_once("models/Report.php");
 require_once("models/Message.php");
 
-class ReportDao implements ReportDAOInterface {
+class ReportDao implements ReportDAOInterface
+{
 
     private $conn;
     private $url;
     private $message;
 
-    public function __construct(PDO $conn, $url) {
+    public function __construct(PDO $conn, $url)
+    {
         $this->conn = $conn;
         $this->url = $url;
         $this->message = new Message($url);
     }
 
-    public function buildReport($data) {
+    public function buildReport($data)
+    {
         $report = new Report();
         $report->id = $data["id"];
         $report->title = $data["title"];
@@ -26,14 +29,23 @@ class ReportDao implements ReportDAOInterface {
         $report->length = $data["length"];
         $report->users_id = $data["users_id"];
 
+        // Recebe as ratings do Relato
+        $reviewDao = new ReviewDao($this->conn, $this->url);
+
+        $rating = $reviewDao->getRatings($report->id);
+
+        $report->rating = $rating;
+
+
         return $report;
     }
 
-    public function findAll() {
-        
+    public function findAll()
+    {
     }
 
-    public function getLatestReport() {
+    public function getLatestReport()
+    {
         $reports = [];
         $stmt = $this->conn->query("SELECT * FROM reports ORDER BY id DESC");
         $stmt->execute();
@@ -48,7 +60,8 @@ class ReportDao implements ReportDAOInterface {
         return $reports;
     }
 
-    public function getReportsByCategory($category) {
+    public function getReportsByCategory($category)
+    {
         $reports = [];
         $stmt = $this->conn->prepare("SELECT * FROM reports WHERE category = :category ORDER BY id DESC");
         $stmt->bindParam(":category", $category);
@@ -64,7 +77,8 @@ class ReportDao implements ReportDAOInterface {
         return $reports;
     }
 
-    public function getReportByUserId($id) {
+    public function getReportByUserId($id)
+    {
         $reports = [];
         $stmt = $this->conn->prepare("SELECT * FROM reports WHERE users_id = :users_id");
         $stmt->bindParam(":users_id", $id);
@@ -80,7 +94,8 @@ class ReportDao implements ReportDAOInterface {
         return $reports;
     }
 
-    public function findById($id) {
+    public function findById($id)
+    {
         $stmt = $this->conn->prepare("SELECT * FROM reports WHERE id = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
@@ -94,7 +109,8 @@ class ReportDao implements ReportDAOInterface {
         }
     }
 
-    public function findByTitle($title) {
+    public function findByTitle($title)
+    {
         $reports = [];
         $stmt = $this->conn->prepare("SELECT * FROM reports WHERE title LIKE :title");
         $stmt->bindValue(":title", '%' . $title . '%');
@@ -110,7 +126,8 @@ class ReportDao implements ReportDAOInterface {
         return $reports;
     }
 
-    public function create(Report $report) {
+    public function create(Report $report)
+    {
         $stmt = $this->conn->prepare("INSERT INTO reports (title, description, image, trailer, category, length, users_id) VALUES (:title, :description, :image, :trailer, :category, :length, :users_id)");
         $stmt->bindParam(":title", $report->title);
         $stmt->bindParam(":description", $report->description);
@@ -123,7 +140,8 @@ class ReportDao implements ReportDAOInterface {
         $this->message->setMessage("Relatório adicionado com sucesso!", "success", "index.php");
     }
 
-    public function update(Report $report) {
+    public function update(Report $report)
+    {
         $stmt = $this->conn->prepare("UPDATE reports SET title = :title, description = :description, image = :image, category = :category, trailer = :trailer, length = :length WHERE id = :id");
         $stmt->bindParam(":title", $report->title);
         $stmt->bindParam(":description", $report->description);
@@ -136,13 +154,11 @@ class ReportDao implements ReportDAOInterface {
         $this->message->setMessage("Relatório atualizado com sucesso!", "success", "dashboard.php");
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
         $stmt = $this->conn->prepare("DELETE FROM reports WHERE id = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
         $this->message->setMessage("Relatório removido com sucesso!", "success", "dashboard.php");
     }
-
-
 }
-?>
