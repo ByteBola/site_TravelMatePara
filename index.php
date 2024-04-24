@@ -8,7 +8,7 @@
 
   $latestReports = $reportDao->getLatestReport();
 
-  $problema_climatico_Reports = $reportDao->getReportsByCategory("Problemaa Climática");
+  $problema_climatico_Reports = $reportDao->getReportsByCategory("Problema Climático");
 
   $transporte_publico_Reports = $reportDao->getReportsByCategory("Segurança Pública");
 

@@ -37,7 +37,7 @@
     $report->image = "report_cover.jpg";
   }
 
-  // Checar se o filme é do usuário
+  // Checar se o Relato é do usuário
   $userOwnsReport = false;
 
   if(!empty($userData)) {
@@ -66,8 +66,9 @@
         <span class="pipe"></span>
         <span><i class="fas fa-star"></i> <?= $report->rating ?></span>
       </p>
+      
       <iframe src="<?= $report->trailer ?>" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encryted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p><?= $report->description ?></p>
+      <p id="descricao-relato"><?= $report->description ?></p>
     </div>
     <div class="col-md-4">
       <div class="movie-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
@@ -75,13 +76,13 @@
     <div class="offset-md-1 col-md-10" id="reviews-container">
       <h3 id="reviews-title">Avaliações:</h3>
       <!-- Verifica se habilita a review para o usuário ou não -->
-      <?php if(!empty($userData) && !$userOwnsMovie && !$alreadyReviewed): ?>
+      <?php if(!empty($userData) && !$userOwnsReport && !$alreadyReviewed): ?>
       <div class="col-md-12" id="review-form-container">
         <h4>Envie sua avaliação:</h4>
         <p class="page-description">Preencha o formulário com a nota e comentário sobre o Relato</p>
         <form action="<?= $BASE_URL ?>review_process.php" id="review-form" method="POST">
           <input type="hidden" name="type" value="create">
-          <input type="hidden" name="reports_id" value="<?= $movie->id ?>">
+          <input type="hidden" name="reports_id" value="<?= $report->id ?>">
           <div class="form-group">
             <label for="rating">Nota do filme:</label>
             <select name="rating" id="rating" class="form-control">

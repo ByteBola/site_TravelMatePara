@@ -40,7 +40,7 @@ if ($type === "create") {
             if (in_array($image["type"], $imageTypes)) {
                 $imageFile = in_array($image["type"], $jpgArray) ? imagecreatefromjpeg($image["tmp_name"]) : imagecreatefrompng($image["tmp_name"]);
                 $imageName = $report->imageGenerateName();
-                imagejpeg($imageFile, "./img/report/" . $imageName, 100);
+                imagejpeg($imageFile, "./img/reports/" . $imageName, 100);
                 $report->image = $imageName;
             } else {
                 $message->setMessage("Tipo inválido de imagem!", "error", "back");
@@ -85,7 +85,7 @@ if ($type === "create") {
                 if (in_array($image["type"], $imageTypes)) {
                     $imageFile = in_array($image["type"], $jpgArray) ? imagecreatefromjpeg($image["tmp_name"]) : imagecreatefrompng($image["tmp_name"]);
                     $imageName = $report->imageGenerateName();
-                    imagejpeg($imageFile, "./img/movies/" . $imageName, 100);
+                    imagejpeg($imageFile, "./img/reports/" . $imageName, 100);
                     $report->image = $imageName;
                 } else {
                     $message->setMessage("Tipo inválido de imagem!", "error", "back");

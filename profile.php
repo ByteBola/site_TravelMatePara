@@ -8,7 +8,7 @@
 
   $user = new User();
   $userDao = new UserDAO($conn, $BASE_URL);
-  $movieDao = new ReportDAO($conn, $BASE_URL);
+  $reporteDao = new ReportDAO($conn, $BASE_URL);
 
   // Receber id do usuário
   $id = filter_input(INPUT_GET, "id");

@@ -11,7 +11,7 @@
 
   $message = new Message($BASE_URL);
   $userDao = new UserDAO($conn, $BASE_URL);
-  $movieDao = new ReportDAO($conn, $BASE_URL);
+  $reportDao = new ReportDAO($conn, $BASE_URL);
   $reviewDao = new ReviewDAO($conn, $BASE_URL);
 
   // Recebendo o tipo do formulário
