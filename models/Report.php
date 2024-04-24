@@ -26,8 +26,8 @@
     public function getReportByUserId($id);
     public function findById($id);
     public function findByTitle($title);
-    public function create(Report $movie);
-    public function update(Report $movie);
+    public function create(Report $report);
+    public function update(Report $report);
     public function destroy($id);
 
   }
