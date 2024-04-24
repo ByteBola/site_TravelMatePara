@@ -94,7 +94,7 @@ label{
 
 #main-container{
     background-color:#fff;
-    color: #ff8086;
+    color: #ff9933;
     min-height: 65vh;
     padding: 40px;
 }
@@ -107,7 +107,7 @@ label{
   #login-container h2,
   #register-container h2 {
     text-align: center;
-    border-bottom: 2px solid #ff8086;
+    border-bottom: 2px solid #ff9933;
     width: 200px;
     margin: 0 auto;
     padding: 10px;
