@@ -73,6 +73,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
       }
       ?>
 
+    <p id=descricao-relato><?= $report->description ?></p>
 
 
     </div>
