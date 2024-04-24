@@ -54,7 +54,7 @@
                 <ul class="navbar-nav">
                     <?php if($userData): ?>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>newcomplaint.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a></li>
+                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a></li>
                         <li class="nav-item"><a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">Meus Relatos</a></li>
                         
                         <li class="nav-item">

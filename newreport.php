@@ -11,7 +11,7 @@ $userData = $userDao->verifyToken(true);
 
 ?>
 <div id="main-container" class="container-fluid">
-  <div class="offset-md-4 col-md-4 new-movie-container">
+  <div class="offset-md-4 col-md-4 new-report-container">
     <h1 class="page-title">Adicionar Relato</h1>
     <p class="page-description">Compartilhe o seu Relato</p>
 
