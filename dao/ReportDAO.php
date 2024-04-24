@@ -3,6 +3,9 @@
 require_once("models/Report.php");
 require_once("models/Message.php");
 
+// Review DAO
+require_once("dao/ReviewDAO.php");
+
 class ReportDao implements ReportDAOInterface
 {
 

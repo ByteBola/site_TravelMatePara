@@ -34,14 +34,14 @@
     public function create(Review $review) {
 
       $stmt = $this->conn->prepare("INSERT INTO reviews (
-        rating, review, movies_id, users_id
+        rating, review, reports_id, users_id
       ) VALUES (
-        :rating, :review, :movies_id, :users_id
+        :rating, :review, :reports_id, :users_id
       )");
 
       $stmt->bindParam(":rating", $review->rating);
       $stmt->bindParam(":review", $review->review);
-      $stmt->bindParam(":movies_id", $review->reports_id);
+      $stmt->bindParam(":reports_id", $review->reports_id);
       $stmt->bindParam(":users_id", $review->users_id);
 
       $stmt->execute();
@@ -57,7 +57,7 @@
 
       $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE reports_id = :reports_id");
 
-      $stmt->bindParam(":movies_id", $id);
+      $stmt->bindParam(":reports_id", $id);
 
       $stmt->execute();
 
@@ -87,9 +87,9 @@
 
     public function hasAlreadyReviewed($id, $userId) {
 
-      $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE movies_id = :movies_id AND users_id = :users_id");
+      $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE reports_id = :reports_id AND users_id = :users_id");
 
-      $stmt->bindParam(":movies_id", $id);
+      $stmt->bindParam(":reports_id", $id);
       $stmt->bindParam(":users_id", $userId);
 
       $stmt->execute();
@@ -104,9 +104,9 @@
 
     public function getRatings($id) {
 
-      $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE movies_id = :movies_id");
+      $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE reports_id = :reports_id");
 
-      $stmt->bindParam(":movies_id", $id);
+      $stmt->bindParam(":reports_id", $id);
 
       $stmt->execute();
 

@@ -33,8 +33,8 @@
   }
 
   // Checar se o filme tem imagem
-  if($movie->image == "") {
-    $movie->image = "report_cover.jpg";
+  if($report->image == "") {
+    $report->image = "report_cover.jpg";
   }
 
   // Checar se o filme é do usuário
