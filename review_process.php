@@ -36,7 +36,7 @@
     if($reportData) {
 
       // Verificar dados mínimos
-      if(!empty($rating) && !empty($review) && !empty($report_id)) {
+      if(!empty($rating) && !empty($review) && !empty($reports_id)) {
 
         $reviewObject->rating = $rating;
         $reviewObject->review = $review;

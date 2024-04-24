@@ -1,21 +1,21 @@
 <?php
-  require_once("globals.php");
-  require_once("db.php");
-  require_once("models/Message.php");
-  require_once("dao/UserDAO.php");
+require_once("globals.php");
+require_once("db.php");
+require_once("models/Message.php");
+require_once("dao/UserDAO.php");
 
-  $message = new Message($BASE_URL);
+$message = new Message($BASE_URL);
 
-  $flassMessage = $message->getMessage();
+$flassMessage = $message->getMessage();
 
-  if(!empty($flassMessage["msg"])) {
+if (!empty($flassMessage["msg"])) {
     // Limpar a mensagem
     $message->clearMessage();
-  }
+}
 
-  $userDao = new UserDAO($conn, $BASE_URL);
+$userDao = new UserDAO($conn, $BASE_URL);
 
-  $userData = $userDao->verifyToken(false);
+$userData = $userDao->verifyToken(false);
 
 ?>
 <!DOCTYPE html>
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- CSS do projeto -->
     <link rel="stylesheet" href="<?= $BASE_URL ?>css/style.css">
+    <script src="<?= $BASE_URL ?> js/script.js"></script>
 </head>
 
 <body>
@@ -52,18 +53,25 @@
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <?php if($userData): ?>
+                    <?php if ($userData) : ?>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a></li>
-                        <li class="nav-item"><a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">Meus Relatos</a></li>
-                        
+                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a>
+                        </li>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold"><?= $userData->name ?></a>
-            <           </li>
+                            <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">Meus Relatos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link">Orientações de Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold">
+                                <?= $userData->name ?>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>logout.php" class="nav-link">Sair</a>
                         </li>
-                    <?php else: ?>
+                    <?php else : ?>
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
                         </li>

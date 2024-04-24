@@ -60,7 +60,7 @@
           <?php endif; ?>
         </div>
         <div class="col-md-12 added-movies-container">
-          <h3>Filmes que enviou:</h3>
+          <h3>Relatos que enviou:</h3>
           <div class="movies-container">
             <?php foreach($userReports as $report): ?>
               <?php require("templates/report_card.php"); ?>

@@ -38,6 +38,10 @@ label{
     margin-left:180px;
 }
 
+.form-control{
+  border: 2px solid #333; 
+}
+
 #search-form .form-control{
     border: none;
     width: 90%;
@@ -59,7 +63,7 @@ label{
 }
 
 .navbar-nav .nav-item .nav-link:hover{
-    color: #777
+    color: #000
 }
 
 .bold {
@@ -594,4 +598,45 @@ label{
     color: #ff9933;
   }
 
+}
+
+/* Orientacoes */
+
+.container-orientacao {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.container-orientacao h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.img-orientacao {
+  margin-bottom: 20px;
+}
+
+.img-orientacao figure {
+  display: block;
+  text-align: center;
+}
+
+.img-orientacao img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.img-orientacao figcaption {
+  font-style: italic;
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+}
+
+.img-orientacao p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
 }

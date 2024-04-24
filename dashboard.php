@@ -29,7 +29,7 @@
           <th scope="col">#</th>
           <th scope="col">Nome do Relato</th>
           <th scope="col">Nota</th>
-          <th scope="col" class="actions-column">Ações</th>
+          <th scope="col" class="actions-column">Relatorio</th>
         </thead>
         <tbody>
           <?php foreach($userReports as $report): ?>

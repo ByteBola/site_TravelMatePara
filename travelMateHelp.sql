@@ -28,7 +28,7 @@ create table reports(
 create table reviews(
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     rating INT,
-    reviews TEXT,
+    review TEXT,
     users_id INT(11) UNSIGNED,
     reports_id INT(11) UNSIGNED,
     FOREIGN KEY(users_id) REFERENCES users(id),
