@@ -3,8 +3,8 @@
 
   require_once("dao/ReportDAO.php");
 
-  // DAO dos filmes
-  $reportDao = new MovieDAO($conn, $BASE_URL);
+  // DAO dos relatos
+  $reportDao = new ReportDAO($conn, $BASE_URL);
 
   // Resgata busca do usuário
   $q = filter_input(INPUT_GET, "q");
