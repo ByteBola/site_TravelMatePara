@@ -157,11 +157,18 @@ class ReportDao implements ReportDAOInterface
         $this->message->setMessage("Relatório atualizado com sucesso!", "success", "dashboard.php");
     }
 
-    public function destroy($id)
-    {
+    public function destroy($id) {
+        // Primeiro, remova referências associadas na tabela `reviews`
+        $stmt = $this->conn->prepare("DELETE FROM reviews WHERE reports_id = :id");
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        
+        // Agora é seguro excluir a linha na tabela `reports`
         $stmt = $this->conn->prepare("DELETE FROM reports WHERE id = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
+        
         $this->message->setMessage("Relatório removido com sucesso!", "success", "dashboard.php");
     }
+    
 }

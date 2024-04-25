@@ -5,7 +5,7 @@ require_once("templates/header.php");
 ?>
 
 <div id="container-temp">
-
+    <h2>Fique atento a previsão do tempo na sua cidade!</h2>
     <form id="search-temp">
         <i class="fa-solid fa-location-dot"></i>
         <input type="search" name="city_name" id="city_name" placeholder="Buscar cidade ">
@@ -83,7 +83,6 @@ require_once("templates/header.php");
         </div>
     </div>
     <div id="alert"></div>
-    
 </div>
 <script src="<?= $BASE_URL ?>/js/script.js"></script>
 <?php

@@ -17,7 +17,7 @@
 ?>
   <div id="main-container" class="container-fluid">
     <h2 class="section-title">Dashboard</h2>
-    <p class="section-description">Adicione ou atualize as informações dos filmes que você enviou</p>
+    <p class="section-description">Adicione ou atualize as informações de Relatos que você enviou</p>
     <div class="col-md-12" id="add-movie-container">
       <a href="<?= $BASE_URL ?>newreport.php" class="btn card-btn">
         <i class="fas fa-plus"></i> Adicionar Relato
