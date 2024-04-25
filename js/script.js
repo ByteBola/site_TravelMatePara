@@ -1,3 +1,4 @@
+// API DO CLIMA
 document.querySelector('#search-temp').addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -56,4 +57,12 @@ function showInfo(json){
 
 function showAlert(msg) {
     document.querySelector('#alert').innerHTML = msg;
+}
+
+// HELP
+
+function toggleDetails(infoId) {
+    const info = document.getElementById(infoId);
+    const details = info.querySelector('.esconder-detalhes');
+    details.style.display = details.style.display === 'block' ? 'none' : 'block';
 }

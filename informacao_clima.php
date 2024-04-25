@@ -8,7 +8,7 @@ require_once("templates/header.php");
 
     <form id="search-temp">
         <i class="fa-solid fa-location-dot"></i>
-        <input type="search" name="city_name" id="city_name" placeholder="Buscar cidade">
+        <input type="search" name="city_name" id="city_name" placeholder="Buscar cidade ">
         <button type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
