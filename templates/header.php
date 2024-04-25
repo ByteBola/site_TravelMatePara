@@ -25,8 +25,7 @@ $userData = $userDao->verifyToken(false);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelMateHelp</title>
-    <link rel="short icon" href="<?= $BASE_URL ?>img/mundo.ico">
-    <!-- Boostrap -->
+    <link rel="short icon" href="<?= $BASE_URL ?>img/mundo.ico"><!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw==" crossorigin="anonymous" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -39,7 +38,7 @@ $userData = $userDao->verifyToken(false);
     <header>
         <nav id="main-navbar" class="navbar navbar-expand-lg">
             <a href="<?= $BASE_URL ?>" class="navbar-brand">
-                <img src="<?= $BASE_URL ?>/img/logo.png" alt="TravelMateHelp" id="logo">
+                <img src="<?= $BASE_URL ?>img/logo.png" alt="TravelMateHelp" id="logo">
                 <span id="travelmatehelp-title">TravelMateHelp</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,26 +52,33 @@ $userData = $userDao->verifyToken(false);
             </form>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
-                            <i class="fas fa-cloud"></i> Previsão do tempo
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= $BASE_URL ?>help.php" class="nav-link">
-                            <i class="fas fa-question-circle"></i> Ajuda com Informações
-                        </a>
-                    </li>
-
                     <?php if ($userData) : ?>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link"><i class="far fa-plus-square"></i> Incluir Relatos</a>
+                            <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
+                                <i class="fas fa-cloud"></i> Previsão do tempo
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">Meus Relatos</a>
+                            <a href="<?= $BASE_URL ?>help.php" class="nav-link">
+                                <i class="fas fa-question-circle"></i> Ajuda com Informações
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link">
+                                <i class="far fa-plus-square"></i> Incluir Relatos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link">Orientações de Publicações</a>
+                            <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">
+                                <i class="fas fa-file-alt"></i> Meus Relatos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link">
+                                <i class="fas fa-lightbulb"></i>
+                                Orientações de Publicações
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold">
@@ -82,12 +88,11 @@ $userData = $userDao->verifyToken(false);
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>logout.php" class="nav-link">Sair</a>
                         </li>
-                    <?php else : ?>
+                    <?php else : ?> <!-- Fechamento do primeiro if -->
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
                         </li>
-
-                    <?php endif; ?>
+                    <?php endif; ?> <!-- Fechamento do else -->
                 </ul>
             </div>
         </nav>

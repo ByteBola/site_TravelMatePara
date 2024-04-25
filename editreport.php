@@ -75,7 +75,7 @@
             </div>
             <div class="form-group">
               <label for="trailer">Trailer:</label>
-              <input type="text" class="form-control" id="trailer" name="trailer" placeholder="Insira o link do trailer" value="<?= $report->trailer ?>">
+              <input type="text" class="form-control" id="trailer" name="trailer" placeholder="Insira o link (Google Maps/YouTube)" value="<?= $report->trailer ?>">
             </div>
             <div class="form-group">
               <label for="description">Descrição:</label>
