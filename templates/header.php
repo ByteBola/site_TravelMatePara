@@ -51,19 +51,20 @@ $userData = $userDao->verifyToken(false);
                 </button>
             </form>
             <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
+                        <i class="fas fa-cloud"></i> Previsão do tempo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= $BASE_URL ?>help.php" class="nav-link">
+                        <i class="fas fa-question-circle"></i> Ajuda com Informações
+                    </a>
+                </li>
+            </u>    
+            <ul class="navbar-nav">
                     <?php if ($userData) : ?>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
-                                <i class="fas fa-cloud"></i> Previsão do tempo
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>help.php" class="nav-link">
-                                <i class="fas fa-question-circle"></i> Ajuda com Informações
-                            </a>
-                        </li>
-
                         <li class="nav-item">
                             <a href="<?= $BASE_URL ?>newreport.php" class="nav-link">
                                 <i class="far fa-plus-square"></i> Incluir Relatos
