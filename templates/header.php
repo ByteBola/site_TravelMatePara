@@ -32,7 +32,7 @@ $userData = $userDao->verifyToken(false);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- CSS do projeto -->
     <link rel="stylesheet" href="<?= $BASE_URL ?>css/style.css">
-    <script src="<?= $BASE_URL ?>/js/script.js"></script>
+    <script src="<?= $BASE_URL ?>js/script.js"></script>
 </head>
 
 <body>
@@ -42,8 +42,10 @@ $userData = $userDao->verifyToken(false);
                 <img src="<?= $BASE_URL ?>img/logo.png" alt="TravelMateHelp" id="logo">
                 <span id="travelmatehelp-title">TravelMateHelp</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <button class="navbar-toggler" type="submit" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars">
+                    
+                </i>
             </button>
             <form action="search.php" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar Informações..." aria-label="Search">
@@ -51,6 +53,7 @@ $userData = $userDao->verifyToken(false);
                     <i class="fas fa-search"></i>
                 </button>
             </form>
+            
             <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav">
                 <li class="nav-item">

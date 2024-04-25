@@ -66,3 +66,4 @@ function toggleDetails(infoId) {
     const details = info.querySelector('.esconder-detalhes');
     details.style.display = details.style.display === 'block' ? 'none' : 'block';
 }
+
