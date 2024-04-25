@@ -42,11 +42,7 @@ $userData = $userDao->verifyToken(false);
                 <img src="<?= $BASE_URL ?>img/logo.png" alt="TravelMateHelp" id="logo">
                 <span id="travelmatehelp-title">TravelMateHelp</span>
             </a>
-            <button class="navbar-toggler" type="submit" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars">
-                    
-                </i>
-            </button>
+            
             <form action="search.php" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar Informações..." aria-label="Search">
                 <button class="btn my-2 my-sm-0" type="submit">
