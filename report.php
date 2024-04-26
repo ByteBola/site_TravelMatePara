@@ -81,11 +81,11 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
       <div class="movie-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
     </div>
     <div class="offset-md-1 col-md-10" id="reviews-container">
-      <h3 id="reviews-title">Avaliações:</h3>
+      <h3 id="reviews-title">Cometários:</h3>
       <!-- Verifica se habilita a review para o usuário ou não -->
       <?php if (!empty($userData) && !$userOwnsReport && !$alreadyReviewed) : ?>
         <div class="col-md-12" id="review-form-container">
-          <h4>Envie sua avaliação:</h4>
+          <h4>Envie seu Comentário:</h4>
           <p class="page-description">Preencha o formulário com a nota e comentário sobre o Relato</p>
           <form action="<?= $BASE_URL ?>review_process.php" id="review-form" method="POST">
             <input type="hidden" name="type" value="create">
@@ -119,7 +119,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
         <?php require("templates/user_review.php"); ?>
       <?php endforeach; ?>
       <?php if (count($reportReviews) == 0) : ?>
-        <p class="empty-list">Não há comentários para este filme ainda...</p>
+        <p class="empty-list">Não há comentários para este relato ainda...</p>
       <?php endif; ?>
     </div>
   </div>

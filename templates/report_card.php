@@ -15,7 +15,7 @@
     <h5 class="card-title">
       <a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>"><?= $report->title ?></a>
     </h5>
-    <a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="btn btn-primary rate-btn">Avaliar</a>
+    <a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="btn btn-primary rate-btn">Comentar</a>
     <a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="btn btn-primary card-btn">Me Informar</a>
   </div>
 </div>
