@@ -8,7 +8,7 @@
 
     // Checar se o filme tem imagem
     if($review->user->image == "") {
-      $review->user->image = "user.png";
+      $review->user->image = "";
     }
 
 ?>

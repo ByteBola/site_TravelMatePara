@@ -17,7 +17,7 @@
             <li class="fas fa-cloud"><a href="<?= $BASE_URL ?>informacao_clima.php">Previsão do Tempo</a></li>
             <li class="fas fa-question-circle"><a href="<?= $BASE_URL ?>help.php">Ajuda com Informações</a></li>
             <?php if ($userData) : ?>
-                <li class="alinha-footer" class="far fa-plus-square"><a href="<?= $BASE_URL ?>newreport.php">Incluir relatos</a></li>
+                <li class="far fa-plus-square"><a href="<?= $BASE_URL ?>newreport.php">Incluir relatos</a></li>
                 <li class="fas fa-file-alt"><a href="<?= $BASE_URL ?>dashboard.php">Meus Relatos</a></li>
                 <li><a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold"><?= $userData->name ?></a></li>
                 <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link"><i class="fas fa-lightbulb"></i>Orientações de Publicações</a>

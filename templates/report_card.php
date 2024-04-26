@@ -1,7 +1,7 @@
 <?php
 
   if(empty($report->image)) {
-    $report->image = "report_cover.jpg";
+    $report->image = "report_cover.png";
   }
 
 ?>
