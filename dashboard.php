@@ -36,7 +36,7 @@
           <tr>
             <td scope="row"><?= $report->id ?></td>
             <td><a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="table-movie-title"><?= $report->title ?></a></td>
-            <td><i class="fas fa-star"></i> <?= $report->rating ?></td>
+            <td><i class="fas fa-comment"></i> <?= $report->rating ?></td>
             <td class="actions-column">
               <a href="<?= $BASE_URL ?>editreport.php?id=<?= $report->id ?>" class="edit-btn">
                 <i class="far fa-edit"></i> Editar

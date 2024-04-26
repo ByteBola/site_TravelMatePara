@@ -9,7 +9,7 @@
   // Resgata busca do usuário
   $q = filter_input(INPUT_GET, "q");
 
-  $report = $reportDao->findByTitle($q);
+  $reports = $reportDao->findByTitle($q);
 
 ?>
   <div id="main-container" class="container-fluid">

@@ -124,7 +124,7 @@
 
       } else {
 
-        $rating = "Não avaliado";
+        $rating = "Não há comentários";
 
       }
 

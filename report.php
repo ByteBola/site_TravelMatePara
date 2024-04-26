@@ -31,7 +31,7 @@ if (empty($id)) {
 
 // Checar se o filme tem imagem
 if ($report->image == "") {
-  $report->image = "report_cover.jpg";
+  $report->image = "report_cover.png";
 }
 
 // Checar se o Relato é do usuário
@@ -60,7 +60,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
         <span class="pipe"></span>
         <span><?= $report->category ?></span>
         <span class="pipe"></span>
-        <span><i class="fas fa-star"></i> <?= $report->rating ?></span>
+        <span><i class="fas fa-comment"></i> <?= $report->rating ?></span>
       </p>
 
       <?php

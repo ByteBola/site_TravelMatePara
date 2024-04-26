@@ -34,7 +34,7 @@
 
   // Checar se o filme tem imagem
   if($report->image == "") {
-    $report->image = "report_cover.jpg";
+    $report->image = "report_cover.png";
   }
 
 ?>

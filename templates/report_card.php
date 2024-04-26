@@ -9,7 +9,7 @@
   <div class="card-img-top" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
   <div class="card-body">
     <p class="card-rating">
-      <i class="fas fa-star"></i>
+      <i class="fas fa-comment"></i>
       <span class="rating"><?= $report->rating ?></span>
     </p>
     <h5 class="card-title">
