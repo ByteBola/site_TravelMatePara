@@ -1,4 +1,6 @@
 # TravelMatePará - Plataforma de Relatos e Informações Sociais
+![pará](https://github.com/TravelMateHelp/site_TravelMatePara/assets/100390250/e9b6b027-7ffb-4244-8cfa-995199884c03)
+
 
 Bem-vindo ao **TravelMatePará**, a rede social focada na publicação de relatos sobre questões sociais e emergências no estado do Pará. Nosso objetivo é fornecer um espaço para os usuários compartilharem informações sobre problemas climáticos, infraestrutura, segurança pública e outros tópicos relevantes para a comunidade paraense.
 
