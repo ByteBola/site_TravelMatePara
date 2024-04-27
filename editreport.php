@@ -74,7 +74,7 @@
 
             </div>
             <div class="form-group">
-              <label for="trailer">Trailer:</label>
+              <label for="trailer">Link do maps:</label>
               <input type="text" class="form-control" id="trailer" name="trailer" placeholder="Insira o link (Google Maps/YouTube)" value="<?= $report->trailer ?>">
             </div>
             <div class="form-group">

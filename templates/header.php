@@ -42,59 +42,68 @@ $userData = $userDao->verifyToken(false);
                 <img src="<?= $BASE_URL ?>img/logo.png" alt="TravelMateHelp" id="logo">
                 <span id="travelmatehelp-title">TravelMateHelp</span>
             </a>
-            
+
             <form action="search.php" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
                 <input type="text" name="q" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar Informações..." aria-label="Search">
                 <button class="btn my-2 my-sm-0" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            
+
             <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
-                        <i class="fas fa-cloud"></i> Previsão do tempo
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= $BASE_URL ?>help.php" class="nav-link">
-                        <i class="fas fa-question-circle"></i> Ajuda com Informações
-                    </a>
-                </li>
-            </u>    
-            <ul class="navbar-nav">
-                    <?php if ($userData) : ?>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>newreport.php" class="nav-link">
-                                <i class="far fa-plus-square"></i> Incluir Relatos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">
-                                <i class="fas fa-file-alt"></i> Meus Relatos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link">
-                                <i class="fas fa-lightbulb"></i>
-                                Orientações de Publicações
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold">
-                                <?= $userData->name ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>logout.php" class="nav-link">Sair</a>
-                        </li>
-                    <?php else : ?> <!-- Fechamento do primeiro if -->
-                        <li class="nav-item">
-                            <a href="<?= $BASE_URL ?>auth.php" class="nav-link">Entrar / Cadastrar</a>
-                        </li>
-                    <?php endif; ?> <!-- Fechamento do else -->
-                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="<?= $BASE_URL ?>informacao_clima.php" class="nav-link">
+                            <i class="fas fa-cloud"></i> Previsão do tempo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= $BASE_URL ?>help.php" class="nav-link">
+                            <i class="fas fa-question-circle"></i> Ajuda com Informações
+                        </a>
+                    </li>
+                    </u>
+                    <ul class="navbar-nav">
+                        <?php if ($userData) : ?>
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>newreport.php" class="nav-link">
+                                    <i class="far fa-plus-square"></i> Incluir Relatos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>dashboard.php" class="nav-link">
+                                    <i class="fas fa-file-alt"></i> Meus Relatos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>orientacoes.php" class="nav-link">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Orientações de Publicações
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>editprofile.php" class="nav-link bold">
+                                    <i class="fas fa-user"></i>
+                                    <?= $userData->name ?>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>logout.php" class="nav-link">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Sair
+                                </a>
+
+                            </li>
+                        <?php else : ?> <!-- Fechamento do primeiro if -->
+                            <li class="nav-item">
+                                <a href="<?= $BASE_URL ?>auth.php" class="nav-link">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Entrar / Cadastrar
+                                </a>
+
+                            </li>
+                        <?php endif; ?> <!-- Fechamento do else -->
+                    </ul>
             </div>
         </nav>
     </header>
