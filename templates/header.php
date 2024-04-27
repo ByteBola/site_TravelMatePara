@@ -24,7 +24,7 @@ $userData = $userDao->verifyToken(false);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelMateHelp</title>
+    <title>TravelMatePará</title>
     <link rel="short icon" href="<?= $BASE_URL ?>img/mundo.ico">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw==" crossorigin="anonymous" />
@@ -39,8 +39,8 @@ $userData = $userDao->verifyToken(false);
     <header>
         <nav id="main-navbar" class="navbar navbar-expand-lg">
             <a href="<?= $BASE_URL ?>" class="navbar-brand">
-                <img src="<?= $BASE_URL ?>img/logo.png" alt="TravelMateHelp" id="logo">
-                <span id="travelmatehelp-title">TravelMateHelp</span>
+                <img src="<?= $BASE_URL ?>img/logo.png" alt="elém" id="logo">
+                <span id="travelmatehelp-title">TravelMatePará</span>
             </a>
 
             <form action="search.php" method="GET" id="search-form" class="form-inline my-2 my-lg-0">
