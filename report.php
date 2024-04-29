@@ -64,14 +64,35 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
       </p>
 
       <?php
-      $trailer_content = $report->trailer;
-
-      if (stripos($trailer_content, '<iframe') === false) {
-        echo "<iframe src='{$trailer_content}' width='560' height='315' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+  $trailer_content = $report->trailer;
+  
+  // Verificar se é um link do Google Maps ou um iframe
+  if (stripos($trailer_content, 'maps.google') !== false || stripos($trailer_content, 'maps.app.goo.gl') !== false) {
+    
+    // Se a entrada já é um iframe, exibe diretamente
+    if (stripos($trailer_content, '<iframe') !== false) {
+      echo $trailer_content;
+    
+    } else {
+      // Se for um link completo do Google Maps (não curto), use diretamente no iframe
+      if (stripos($trailer_content, 'maps.google') !== false) {
+        echo "<iframe src='{$trailer_content}' width='560' height='315' frameborder='0' allowfullscreen></iframe>";
+      
       } else {
-        echo "<div>$trailer_content</div>";
+        // Se for um link curto, exibe uma mensagem de aviso ou um link clicável
+        echo "<h3>Link curto não pode ser convertido para incorporação direta</h3>";
+        echo "<a href='{$trailer_content}' target='_blank'>Clique aqui para abrir o mapa</a>";
       }
-      ?>
+    }
+
+  } else {
+    // Se a URL não for do Google Maps, retorna uma mensagem de erro
+    echo "<h3>URL não pertence ao Google Maps</h3>";
+  }
+?>
+
+
+
 
     <p id=descricao-relato><?= $report->description ?></p>
 
