@@ -8,7 +8,7 @@
 
   $user = new User();
   $userDao = new UserDAO($conn, $BASE_URL);
-  $reporteDao = new ReportDAO($conn, $BASE_URL);
+  $reportDao = new ReportDAO($conn, $BASE_URL);
 
   // Receber id do usuário
   $id = filter_input(INPUT_GET, "id");
@@ -42,8 +42,8 @@
     $userData->image = "user.png";
   }
 
-  // Filmes que o usuário adicionou
-  $userports = $reportDao->getReportsByUserId($id);
+  // Relatos que o usuário adicionou
+  $userports = $reportDao->getReportByUserId($id);
 
 ?>
   <div id="main-container" class="container-fluid">
