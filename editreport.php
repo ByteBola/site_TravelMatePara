@@ -23,7 +23,7 @@
 
     $report = $reportDao->findById($id);
 
-    // Verifica se o filme existe
+    // Verifica se o  existe
     if(!$report) {
 
       $message->setMessage("O relato não foi encontrado!", "error", "index.php");
@@ -32,7 +32,7 @@
 
   }
 
-  // Checar se o filme tem imagem
+  // Checar se o Relato tem imagem
   if($report->image == "") {
     $report->image = "report_cover.png";
   }
@@ -44,7 +44,7 @@
         <div class="col-md-6 offset-md-1">
           <h1><?= $report->title ?></h1>
           <p class="page-description">Altere os dados do relato no fomrulário abaixo:</p>
-          <form id="edit-movie-form" action="<?= $BASE_URL ?>report_process.php" method="POST" enctype="multipart/form-data">
+          <form id="edit-relato-form" action="<?= $BASE_URL ?>report_process.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="type" value="update">
             <input type="hidden" name="id" value="<?= $report->id ?>">
             <div class="form-group">
@@ -79,13 +79,13 @@
             </div>
             <div class="form-group">
               <label for="description">Descrição:</label>
-              <textarea name="description" id="description" rows="5" class="form-control" placeholder="Descreva o filme..."><?= $report->description ?></textarea>
+              <textarea name="description" id="description" rows="5" class="form-control" placeholder="Descreva o relato..."><?= $report->description ?></textarea>
             </div>
             <input type="submit" class="btn card-btn" value="Editar Relato">
           </form>
         </div>
         <div class="col-md-3">
-          <div class="movie-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
+          <div class="relato-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@
   <div id="main-container" class="container-fluid">
     <h2 class="section-title" id="search-title">Você está buscando por: <span id="search-result"><?= $q ?></span></h2>
     <p class="section-description">Resultados de busca retornados com base na sua pesquisa.</p>
-    <div class="movies-container">
+    <div class="relatos-container">
       <?php foreach($reports as $report): ?>
         <?php require("templates/report_card.php"); ?>
       <?php endforeach; ?>

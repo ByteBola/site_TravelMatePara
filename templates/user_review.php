@@ -6,7 +6,7 @@
 
     $fullName = $userModel->getFullName($review->user);
 
-    // Checar se o filme tem imagem
+    // Checar se o relato tem imagem
     if($review->user->image == "") {
       $review->user->image = "";
     }

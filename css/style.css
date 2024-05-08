@@ -117,13 +117,13 @@ label{
   font-size: 18px;
 }
 
-.movies-container {
+.relatos-container {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
 
-.movie-card {
+.relato-card {
   background-color: #3385ff;
   width: 18%;
   margin-bottom: 30px;
@@ -131,7 +131,7 @@ label{
   margin-right: 1%;
 }
 
-.movie-card .card-img-top {
+.relato-card .card-img-top {
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -246,9 +246,9 @@ label{
 }
 
 .edit-profile-page .card-btn,
-#add-movie-container .card-btn,
+#add-relato-container .card-btn,
 #review-form .card-btn,
-#edit-movie-form .card-btn {
+#edit-relato-form .card-btn {
   width: auto;
 }
 
@@ -270,7 +270,7 @@ label{
   margin: 20px auto;
 }
 
-.added-movies-container,
+.added-relatos-container,
 .about-container {
   padding-top: 20px;
 }
@@ -281,24 +281,24 @@ label{
   border-bottom: 3px solid #CCC;
 }
 
-.added-movies-container {
+.added-relatos-container {
   background-color: #333;
 }
 
-.added-movies-container .movies-container {
+.added-relatos-container .relatos-container {
   padding: 20px;
 }
 
-.added-movies-container .movie-card {
+.added-relatos-container .relato-card {
   width: 31%;
 }
 
-/* New Movie */
-.new-movie-container {
+/* New Relato */
+.new-relato-container {
   text-align: center;
 }
 
-#add-movie-form {
+#add-relato-form {
   text-align: left;
 }
 
@@ -307,7 +307,7 @@ label{
   padding: 8px;
 }
 
-.movie-image-container {
+.relato-image-container {
   height: 400px;
   min-width: 200px;
   background-position: center;
@@ -323,12 +323,12 @@ label{
   padding-top: 7px;
 }
 
-/* Movie */
-.movie-container {
+/* Relato */
+.relato-container {
   text-align: center;
 }
 
-.movie-details {
+.relato-details {
   margin: 25px 0;
 }
 
@@ -375,29 +375,29 @@ label{
 }
 
 /* Dashboard */
-#add-movie-container {
+#add-relato-container {
   text-align: right;
 }
 
-#movies-dashboard .table {
+#relatos-dashboard .table {
   color: #000;
 }
 
-#movies-dashboard .table th {
+#relatos-dashboard .table th {
   border-top: none;
 }
 
-#movies-dashboard .table tr {
+#relatos-dashboard .table tr {
   padding: 15px 0;
 }
 
-.table-movie-title {
+.table-relato-title {
   color: #000;
   font-weight: bold;
   transition: .5s;
 }
 
-.table-movie-title:hover {
+.table-relato-title:hover {
   color: #ff9933;
 }
 
@@ -534,20 +534,20 @@ label{
     margin-bottom: 1rem;
   }
 
-  .movies-container {
+  .relatos-container {
     padding: 0 15px;
   }
 
-  .movie-card {
+  .relato-card {
     width: 100%;
   }
 
-  .movie-details {
+  .relato-details {
     display: flex;
     flex-direction: column;
   }
 
-  .movie-details span {
+  .relato-details span {
     padding-bottom: 8px;
   }
 
@@ -555,7 +555,7 @@ label{
     display: none;
   }
 
-  .movie-container iframe {
+  .relato-container iframe {
     max-width: 100% !important;
   }
 
@@ -577,13 +577,13 @@ label{
     width: 100%;
   }
 
-  /* Movie */
+  /* Relato */
   .review {
     padding: 0 15px;
   }
 
   /* Dashboard */
-  #movies-dashboard {
+  #relatos-dashboard {
     padding: 0;
   }
 
@@ -596,8 +596,8 @@ label{
     margin-bottom: 10px;
   }
 
-  /* Edit movie */
-  .movie-image-container {
+  /* Edit relatos */
+  .relato-image-container {
     margin-top: 1rem;
   }
 

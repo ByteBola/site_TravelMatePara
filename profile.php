@@ -59,9 +59,9 @@
             <p class="profile-description">O usuário ainda não escreveu nada aqui...</p>
           <?php endif; ?>
         </div>
-        <div class="col-md-12 added-movies-container">
+        <div class="col-md-12 added-relatos-container">
           <h3>Relatos que enviou:</h3>
-          <div class="movies-container">
+          <div class="relatos-container">
             <?php foreach($userReports as $report): ?>
               <?php require("templates/report_card.php"); ?>
             <?php endforeach; ?>

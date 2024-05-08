@@ -6,7 +6,7 @@ require_once("models/Report.php");
 require_once("dao/ReportDAO.php");
 require_once("dao/ReviewDAO.php");
 
-// Pegar o id do filme
+// Pegar o id do relato
 $id = filter_input(INPUT_GET, "id");
 
 $report;
@@ -22,14 +22,14 @@ if (empty($id)) {
 
   $report = $reportDao->findById($id);
 
-  // Verifica se o filme existe
+  // Verifica se o rlato existe
   if (!$report) {
 
     $message->setMessage("O Relato não foi encontrado!", "error", "index.php");
   }
 }
 
-// Checar se o filme tem imagem
+// Checar se o relato tem imagem
 if ($report->image == "") {
   $report->image = "report_cover.png";
 }
@@ -53,9 +53,9 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
 ?>
 <div id="main-container" class="container-fluid">
   <div class="row">
-    <div class="offset-md-1 col-md-6 movie-container">
+    <div class="offset-md-1 col-md-6 relato-container">
       <h1 class="page-title"><?= $report->title ?></h1>
-      <p class="movie-details">
+      <p class="relato-details">
         <span>Duração: <?= $report->length ?></span>
         <span class="pipe"></span>
         <span><?= $report->category ?></span>
@@ -96,7 +96,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
 
     </div>
     <div class="col-md-4">
-      <div class="movie-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
+      <div class="relato-image-container" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
     </div>
     <div class="offset-md-1 col-md-10" id="reviews-container">
       <h3 id="reviews-title">Cometários:</h3>
@@ -126,7 +126,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
             </div>
             <div class="form-group">
               <label for="review">Seu comentário:</label>
-              <textarea name="review" id="review" rows="3" class="form-control" placeholder="O que você achou do filme?"></textarea>
+              <textarea name="review" id="review" rows="3" class="form-control" placeholder="O que você achou do relato?"></textarea>
             </div>
             <input type="submit" class="btn card-btn" value="Enviar comentário">
           </form>

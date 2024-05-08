@@ -46,7 +46,7 @@
 
       $stmt->execute();
 
-      // Mensagem de sucesso por adicionar filme
+      // Mensagem de sucesso por adicionar relato
       $this->message->setMessage("Relato adicionado com sucesso!", "success", "index.php");
 
     }

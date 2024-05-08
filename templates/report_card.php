@@ -5,7 +5,7 @@
   }
 
 ?>
-<div class="card movie-card">
+<div class="card relato-card">
   <div class="card-img-top" style="background-image: url('<?= $BASE_URL ?>img/reports/<?= $report->image ?>')"></div>
   <div class="card-body">
     <p class="card-rating">

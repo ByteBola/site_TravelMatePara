@@ -3,7 +3,7 @@ require_once("templates/header.php");
 
 require_once("dao/ReportDAO.php");
 
-// DAO dos filmes
+// DAO dos relatos
 $reportDao = new ReportDAO($conn, $BASE_URL);
 
 $latestReports = $reportDao->getLatestReport();
@@ -18,7 +18,7 @@ $transporte_publico_Reports = $reportDao->getReportsByCategory("Segurança Públ
 
   <h2 class="section-title">Relatos Novos</h2>
   <p class="section-description">Veja as críticas dos últimos relatos adicionados no elém</p>
-  <div class="movies-container">
+  <div class="relatos-container">
     <?php foreach ($latestReports as $report) : ?>
       <?php require("templates/report_card.php"); ?>
     <?php endforeach; ?>
@@ -28,7 +28,7 @@ $transporte_publico_Reports = $reportDao->getReportsByCategory("Segurança Públ
   </div>
   <h2 class="section-title">Problemas Climáticos</h2>
   <p class="section-description">fique informado sobre os problemas climáticos</p>
-  <div class="movies-container">
+  <div class="relatos-container">
     <?php foreach ($problema_climatico_Reports as $report) : ?>
       <?php require("templates/report_card.php"); ?>
     <?php endforeach; ?>
@@ -38,7 +38,7 @@ $transporte_publico_Reports = $reportDao->getReportsByCategory("Segurança Públ
   </div>
   <h2 class="section-title">Segurança Pública</h2>
   <p class="section-description">fique informado sobre os problemas de segurança pública</p>
-  <div class="movies-container">
+  <div class="relatos-container">
     <?php foreach ($transporte_publico_Reports as $report) : ?>
       <?php require("templates/report_card.php"); ?>
     <?php endforeach; ?>

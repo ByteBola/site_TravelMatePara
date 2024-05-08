@@ -18,12 +18,12 @@
   <div id="main-container" class="container-fluid">
     <h2 class="section-title">Dashboard</h2>
     <p class="section-description">Adicione ou atualize as informações de Relatos que você enviou</p>
-    <div class="col-md-12" id="add-movie-container">
+    <div class="col-md-12" id="add-relato-container">
       <a href="<?= $BASE_URL ?>newreport.php" class="btn card-btn">
         <i class="fas fa-plus"></i> Adicionar Relato
       </a>
     </div>
-    <div class="col-md-12" id="movies-dashboard">
+    <div class="col-md-12" id="relatos-dashboard">
       <table class="table">
         <thead>
           <th scope="col">#</th>
@@ -35,7 +35,7 @@
           <?php foreach($userReports as $report): ?>
           <tr>
             <td scope="row"><?= $report->id ?></td>
-            <td><a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="table-movie-title"><?= $report->title ?></a></td>
+            <td><a href="<?= $BASE_URL ?>report.php?id=<?= $report->id ?>" class="table-relato-title"><?= $report->title ?></a></td>
             <td><i class="fas fa-comment"></i> <?= $report->rating ?></td>
             <td class="actions-column">
               <a href="<?= $BASE_URL ?>editreport.php?id=<?= $report->id ?>" class="edit-btn">
