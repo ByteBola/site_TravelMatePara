@@ -86,7 +86,7 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
         }
       } else {
         // Se o conteúdo não é um link do Google Maps ou um iframe
-        echo $trailer_content;
+        echo "Insira um link válido de preferencia do google maps.";
       }
       ?>
 
