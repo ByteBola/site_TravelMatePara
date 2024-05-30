@@ -85,8 +85,8 @@ $reportReviews = $reviewDao->getReportsReview($report->id);
           }
         }
       } else {
-        // Se a URL não for do Google Maps, exibe uma mensagem de erro
-        echo "<h3>A URL fornecida não é do Google Maps.(edite o post)</h3>";
+        // Se o conteúdo não é um link do Google Maps ou um iframe
+        echo $trailer_content;
       }
       ?>
 

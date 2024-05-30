@@ -55,8 +55,8 @@ $userData = $userDao->verifyToken(true);
 
       <!-- Link para mídia (Google Maps, YouTube, etc.) -->
       <div class="form-group">
-        <label for="location">Mídia:</label>
-        <input type="text" class="form-control" id="location" name="trailer" placeholder="Insira o link (Google Maps/YouTube)">
+        <label for="location">Localização:</label>
+        <input type="text" class="form-control" id="location" name="trailer" placeholder="Insira o link incorporado do Google Maps">
       </div>
 
       <!-- Descrição do relato -->
